@@ -1,0 +1,14 @@
+[Unit]
+Description=Custom route 
+After=wpa_supplicant.service
+After=network.target
+
+[Service]
+Type=simple
+User=root
+Group=wheel
+ExecStart=/sbin/route add -net default gw 192.168.1.1 metric 1000
+
+[Install]
+WantedBy=multi-user.target
+
