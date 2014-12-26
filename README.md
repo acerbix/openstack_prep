@@ -6,7 +6,7 @@ Files/scripts/Instructions to prep a RHEL 7 Server for openstack packstack execu
 This is intended to be used in three ways:
    - General system prep to get the system to a shape that I like, starting from RHEL 7 minimum install
       - Set up cert based login from my mac to the server:
-         - cat .ssh/id_rsa.pub | ssh "<openstack server name>" 'cat >> .ssh/authorized_keys'
+         - cat .ssh/id_rsa.pub | ssh [openstack server name] 'cat >> .ssh/authorized_keys'
          - On server: chmod 700 .ssh; chmod 640 .ssh/authorized_keys
       - RHEL Subscription Manager registration [Centos/RDO shouldnt need to do this]
       - Change hostname/dnsdomainname to what I like, using nmtui or hostnamectl
